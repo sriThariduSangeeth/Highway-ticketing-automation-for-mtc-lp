@@ -1,5 +1,5 @@
 <h3 align="center">:rotating_light: :construction:&ensp;&ensp;Work In Progress&ensp;&ensp;:construction: :rotating_light:</h3>
-<h1 align="center">highway-ticketing-automation-for-mtc-lp</h1>
+<h1 align="center">Highway Ticketing Automation for MTC LP</h1>
 
 <p>LP Training code base that belongs to my office work.</P>
 
@@ -34,4 +34,4 @@
 <h4 align="center">Here is a screenshot of the System architecture design</h4>
 <!-- image -->
 <img src="./assest/systemdesgin.png"
-alt="App Screenshots" height="400" width="880">
+alt="App Screenshots" height="900" width="880">
