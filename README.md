@@ -19,6 +19,7 @@
     <li>Lp-highway-ticketing-automation-mtc-backend</li>
     <li>Lp-highway-ticketing-automation-mtc-web-app</li>
     <li>Lp-highway-ticketing-automation-mtc-mobile-app</li>
+    <li>Lp-highway-ticketing-automation-cloud-config-store</li>
 </ul>
 
 [![Maven](https://img.shields.io/badge/maven%20central-2.0-yellowgreen)](http://stackoverflow.com/questions/tagged/maven)
