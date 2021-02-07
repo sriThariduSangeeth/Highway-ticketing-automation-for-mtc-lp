@@ -1,6 +1,11 @@
 # Default ignored files
+HELP.md
+target/
 /shelf/
 /workspace.xml
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 # Datasource local storage ignored files
 /dataSources.local.xml
 # Editor-based HTTP Client requests
@@ -28,3 +33,8 @@
 *.zip
 *.tar.gz
 *.rar
+
+### IntelliJ IDEA ###
+*.iws
+*.iml
+*.ipr
