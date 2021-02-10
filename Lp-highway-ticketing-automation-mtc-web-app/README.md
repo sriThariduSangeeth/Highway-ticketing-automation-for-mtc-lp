@@ -20,7 +20,7 @@ LP Training code base that belongs to my office work.
   
 
 [![OpenIssues](https://img.shields.io/github/issues/sriThariduSangeeth/Highway-ticketing-automation-for-mtc-lp?style=social)](https://github.com/sriThariduSangeeth/Highway-ticketing-automation-for-mtc-lp/issues)
-<img src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" alt="License: MIT" height="25">
+<img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="License: MIT" height="25">
   <a>
     <img src="https://img.shields.io/badge/Build-Passed-green" alt="Build: Passed" height="18">
   </a>
