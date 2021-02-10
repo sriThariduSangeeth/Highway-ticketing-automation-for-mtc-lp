@@ -17,7 +17,16 @@
 
 <ul>
     <li>Lp-highway-ticketing-automation-mtc-backend</li>
+     ```
+      - [x] Java
+      - [x] Maven
+      - [x] Spring
+     ```
     <li>Lp-highway-ticketing-automation-mtc-web-app</li>
+     ```
+      - [x] Angular 10
+      - [x] Node
+     ```
     <li>Lp-highway-ticketing-automation-mtc-mobile-app</li>
     <li>Lp-highway-ticketing-automation-cloud-config-store</li>
 </ul>
