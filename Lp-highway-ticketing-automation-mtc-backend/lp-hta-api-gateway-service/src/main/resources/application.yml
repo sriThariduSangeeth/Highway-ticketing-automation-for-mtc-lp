@@ -1,0 +1,37 @@
+server:
+  port: 9191
+
+spring:
+  application:
+    name: api-gateway
+  profiles:
+    active: dev
+  cloud:
+    gateway:
+      routes:
+        - id : vehicleservice
+          uri : lb://vehicleservice
+          predicates :
+            - Path=/vehicle/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: vehicleservice
+                fallbackuri: forward:/vehicleserviceFallBack
+
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
