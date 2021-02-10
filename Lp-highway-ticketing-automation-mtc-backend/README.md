@@ -1,7 +1,8 @@
 <h3 align="center">:rotating_light: :construction:&ensp;&ensp;Work In Progress&ensp;&ensp;:construction: :rotating_light:</h3>
 <h1 align="center"> Highway Ticketing System -(HTA) </h1>
 <h3 align="center"> Backend Services </h3>
-LP Training code base that belongs to my office work.
+
+> LP Training code base that belongs to my office work. :office:
 
 <h2>License</h2>
 
@@ -28,7 +29,7 @@ LP Training code base that belongs to my office work.
 <ul>
     <li><strong>lp-hta-api-gateway-service</strong></li>
       <ul>
-        <li><em>`Spring API GateWay :`</em>
+        <li><em>Spring API GateWay :</em>
           <p>Spring Cloud Gateway aims to provide a simple, yet effective way to route to APIs and provide cross cutting concerns to them such as: security, monitoring/metrics, and resiliency.</p>
         </li>
         <li><em>Spring Cloud Circuit breaker :</em>
