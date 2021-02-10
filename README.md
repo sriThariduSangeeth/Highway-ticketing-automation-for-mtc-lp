@@ -17,13 +17,15 @@
 
 <ul>
     <li>Lp-highway-ticketing-automation-mtc-backend</li>
-      - [x] Java
-      - [x] Maven
-      - [x] Spring
+      ```
+        Java
+        Maven
+        Spring
+      ```
     <li>Lp-highway-ticketing-automation-mtc-web-app</li>
      ```
-      - [x] Angular 10
-      - [x] Node
+        Angular 10
+        Node
      ```
     <li>Lp-highway-ticketing-automation-mtc-mobile-app</li>
     <li>Lp-highway-ticketing-automation-cloud-config-store</li>
