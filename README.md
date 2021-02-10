@@ -23,7 +23,8 @@
 </ul>
 
 [![Maven](https://img.shields.io/badge/maven%20central-2.0-yellowgreen)](http://stackoverflow.com/questions/tagged/maven)
-<img src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" alt="License: MIT" height="25">
+<img src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" alt="Spring Boot" height="25">
+<img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular 10" height="25">
   <a>
     <img src="https://img.shields.io/badge/Build-Passed-green" alt="Build: Passed" height="18">
   </a>
