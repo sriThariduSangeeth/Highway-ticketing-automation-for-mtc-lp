@@ -17,15 +17,22 @@ LP Training code base that belongs to my office work.
 
 <ul>
     <li>lp-hta-api-gateway-service</li>
-  <ul>
-    <li>API GateWay :
-      <p>Spring Cloud Gateway aims to provide a simple, yet effective way to route to APIs and provide cross cutting concerns to them such as: security, monitoring/metrics, and resiliency.</p>
-    </li>
-  </ul>
+      <ul>
+        <li>Spring API GateWay :
+          <p>Spring Cloud Gateway aims to provide a simple, yet effective way to route to APIs and provide cross cutting concerns to them such as: security, monitoring/metrics, and resiliency.</p>
+        </li>
+      </ul>
     <li>lp-hta-cloud-common-models</li>
-  <ul>
-    <li>Cloud common modle use for</li>
-  </ul>
+      <ul>
+        <li>Spring Cloud common :
+          <p>Spring Cloud Commons delivers features as two libraries: </P>
+            <ol>
+              <li>Spring Cloud Context</li>
+              <li>Spring Cloud Commons</li>
+            </ol>
+          <p>Spring Cloud Context provides utilities and special services for the ApplicationContext of a Spring Cloud application (bootstrap context, encryption, refresh scope and environment endpoints).(eg. Spring Cloud Netflix vs. Spring Cloud Consul)</p>
+        </li>
+      </ul>
     <li>lp-hta-cloud-config-service</li>
   <ul>
     <li>Cloud config use for</li>
