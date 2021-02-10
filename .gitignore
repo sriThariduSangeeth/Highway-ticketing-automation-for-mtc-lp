@@ -14,6 +14,11 @@ target/
 # Compiled class file
 *.class
 
+#maven command
+mvnw
+mvnw.cmd
+
+
 # Log file
 *.log
 #idea file
