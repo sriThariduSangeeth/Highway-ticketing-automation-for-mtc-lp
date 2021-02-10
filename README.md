@@ -1,11 +1,11 @@
 <h3 align="center">:rotating_light: :construction:&ensp;&ensp;Work In Progress&ensp;&ensp;:construction: :rotating_light:</h3>
 <h1 align="center">Highway Ticketing Automation for MTC LP</h1>
 
-<p>LP Training code base that belongs to my office work.</P>
+> LP Training code base that belongs to my office work. &ensp;:boat: :boat:
 
 <h2>License</h2>
 
-<p>Licenses this source under the <u>MIT License</u>,You may not use this file except in compliance with the License.</p>
+> Licenses this source under the <u>MIT License</u>,You may not use this file except in compliance with the License.
 <!-- Badges -->
 <p align="left">
   <a href="LICENSE.md">
