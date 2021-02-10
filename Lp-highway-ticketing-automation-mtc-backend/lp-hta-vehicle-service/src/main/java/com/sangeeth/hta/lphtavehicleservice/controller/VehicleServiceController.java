@@ -50,6 +50,5 @@ public class VehicleServiceController {
                     .status(HttpStatus.UNAUTHORIZED)
                     .body("Invalid Vehicle Object or Vehicle Type !" );
         }
-
     }
 }
