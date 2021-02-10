@@ -18,7 +18,9 @@ LP Training code base that belongs to my office work.
 <ul>
     <li>lp-hta-api-gateway-service</li>
   <ul>
-    <li>API GateWay use for</li>
+    <li>API GateWay :
+      <p>Spring Cloud Gateway aims to provide a simple, yet effective way to route to APIs and provide cross cutting concerns to them such as: security, monitoring/metrics, and resiliency.</p>
+    </li>
   </ul>
     <li>lp-hta-cloud-common-models</li>
   <ul>
