@@ -64,10 +64,12 @@ LP Training code base that belongs to my office work.
 
 <ul>
   <li><strong>lp-hta-vehicle-service</strong></li>
-    <ul>
-      <li> spring: application: name: <em>vehicleservice</em> </li>
-      <li> URL:  <a> http://vehicleservice/vehicle/* </a>  </li>
-    </ul>
+  
+  ```
+      spring: application: name: <em>vehicleservice</em>
+      URL:    http://vehicleservice/vehicle/*
+   
+  ```
   <li><strong>lp-hta-driver-service</strong></li>
     <ul>
       <li> spring: application: name: <em>driverservice</em> </li>
