@@ -13,6 +13,16 @@ LP Training code base that belongs to my office work.
   </a>
 </p>
 
+[![Maven](https://img.shields.io/badge/maven%20central-2.0-yellowgreen)](http://stackoverflow.com/questions/tagged/maven)
+[![OpenIssues](https://img.shields.io/github/issues/sriThariduSangeeth/Highway-ticketing-automation-for-mtc-lp?style=social)](https://github.com/sriThariduSangeeth/Highway-ticketing-automation-for-mtc-lp/issues)
+<img src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" alt="License: MIT" height="25">
+  <a>
+    <img src="https://img.shields.io/badge/Build-Passed-green" alt="Build: Passed" height="18">
+  </a>
+ <a>
+    <img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif" alt="Build: Passed" height="18">
+  </a>
+
 <h2>Content&ensp;&ensp;:book: :book:</h2>
 
 <ul>
@@ -90,13 +100,4 @@ LP Training code base that belongs to my office work.
     </ul>
 </ul> 
 
-[![Maven](https://img.shields.io/badge/maven%20central-2.0-yellowgreen)](http://stackoverflow.com/questions/tagged/maven)
-[![OpenIssues](https://img.shields.io/github/issues/sriThariduSangeeth/Highway-ticketing-automation-for-mtc-lp?style=social)](https://github.com/sriThariduSangeeth/Highway-ticketing-automation-for-mtc-lp/issues)
-<img src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" alt="License: MIT" height="25">
-  <a>
-    <img src="https://img.shields.io/badge/Build-Passed-green" alt="Build: Passed" height="18">
-  </a>
- <a>
-    <img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif" alt="Build: Passed" height="18">
-  </a>
 
