@@ -65,39 +65,39 @@ LP Training code base that belongs to my office work.
 <ul>
   <li><strong>lp-hta-vehicle-service</strong></li>
   
-  ```spring: application: name: vehicleservice
+     spring: application: name: vehicleservice
      URL:    http://vehicleservice/vehicle/*
-  ```
+     
   <li><strong>lp-hta-driver-service</strong></li>
     
-    spring: application: name: ***driverservice***
-    URL:    http://driverservice/driver/*
+     spring: application: name: ***driverservice***
+     URL:    http://driverservice/driver/*
     
   <li><strong>lp-hta-trip-service</strong></li>
-    <ul>
-      <li> spring: application: name: <em>tripservice</em> </li>
-      <li> URL:  <a> http://tripservice/trip/* </a>  </li>
-    </ul>
+    
+     spring: application: name: tripservice
+     URL:    http://tripservice/trip/*
+   
   <li><strong>lp-hta-payment-service</strong></li>
-    <ul>
-      <li> spring: application: name: <em>paymentservice</em> </li>
-      <li> URL:  <a> http://paymentservice/payment/* </a>  </li>
-    </ul>
+    
+     spring: application: name: paymentservice
+     URL:    http://paymentservice/payment/* 
+    
   <li><strong>lp-hta-notify-service</strong></li>
-    <ul>
-      <li> spring: application: name: <em>notifyservice</em> </li>
-      <li> URL:  <a> http://notifyservice/notify/* </a>  </li>
-    </ul>
+    
+     spring: application: name: notifyservice
+     URL:    http://notifyservice/notify/*
+    
   <li><strong>lp-hta-counter-service</strong></li>
-    <ul>
-      <li> spring: application: name: <em>counterservice</em> </li>
-      <li> URL:  <a> http://counterservice/counter/* </a>  </li>
-    </ul>
+    
+     spring: application: name: counterservice
+     URL:    http://counterservice/counter/*
+   
   <li><strong>lp-hta-billing-service</strong></li>
-    <ul>
-      <li> spring: application: name: <em>billingservice</em> </li>
-      <li> URL:  <a> http://billingservice/billing/* </a>  </li>
-    </ul>
+    
+     spring: application: name: billingservice
+     URL:    http://billingservice/billing/*
+    
 </ul> 
 
 
