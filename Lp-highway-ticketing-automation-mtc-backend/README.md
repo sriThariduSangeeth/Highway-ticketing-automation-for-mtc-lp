@@ -29,7 +29,7 @@ LP Training code base that belongs to my office work.
     <li>lp-hta-api-gateway-service</li>
       <ul>
         <li>Spring API GateWay :
-          <p>Spring Cloud Gateway aims to provide a simple, yet effective way to route to APIs and provide cross cutting concerns to them such as: security, monitoring/metrics, and resiliency.</p>
+         > <p>Spring Cloud Gateway aims to provide a simple, yet effective way to route to APIs and provide cross cutting concerns to them such as: security, monitoring/metrics, and resiliency.</p>
         </li>
         <li>Spring Cloud Circuit breaker :
           <p>Spring Cloud Circuit breaker provides an abstraction across different circuit breaker implementations. It provides a consistent API to use in your applications allowing you the developer to choose the circuit breaker implementation that best fits your needs for your app.</p>
