@@ -1,8 +1,6 @@
 server:
   port: 9196
 spring:
-  application:
-    name: trip
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/lptask
     username: root
@@ -13,5 +11,3 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: update
-  profiles:
-    active: dev

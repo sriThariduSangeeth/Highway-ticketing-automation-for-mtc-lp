@@ -3,3 +3,9 @@ spring:
     name: vehicleservice
   profiles:
     active: dev
+
+google:
+  service_account_email:  highwayticket@hightwayapp.iam.gserviceaccount.com
+  application_name: highwayticket
+  folder_id:  12jvZ0mlthWALI1Jgo_5dPTgMn5TAUK8r
+  service_account_key:  hightwayapp-2a35a59c516a.p12
