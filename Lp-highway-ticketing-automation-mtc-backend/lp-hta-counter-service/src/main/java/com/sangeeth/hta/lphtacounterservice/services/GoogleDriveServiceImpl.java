@@ -1,4 +1,4 @@
-package com.sangeeth.hta.lphtavehicleservice.services;
+package com.sangeeth.hta.lphtacounterservice.services;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.http.FileContent;
@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Value;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.util.Collections;
-import java.util.logging.Logger;
 
 /**
  * @author dtsangeeth
@@ -63,11 +62,11 @@ public class GoogleDriveServiceImpl implements GoogleDriveService{
         File file = new File();
         try {
             java.io.File fileUpload = new java.io.File(filePath);
-            com.google.api.services.drive.model.File fileMetadata = new com.google.api.services.drive.model.File();
+            File fileMetadata = new File();
             fileMetadata.setMimeType(mimeType);
             fileMetadata.setName(fileName);
             fileMetadata.setParents(Collections.singletonList(folderID));
-            com.google.api.client.http.FileContent fileContent = new FileContent(mimeType, fileUpload);
+            FileContent fileContent = new FileContent(mimeType, fileUpload);
             file = getDriveService().files().create(fileMetadata, fileContent)
                     .setFields("id,webContentLink,webViewLink").execute();
         } catch (Exception e) {

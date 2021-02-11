@@ -1,8 +1,9 @@
 spring:
   application:
-    name: driverservice
+    name: counterservice
   profiles:
     active: dev
+
 
 google:
   service_account_email: highwayticket@hightwayapp.iam.gserviceaccount.com
