@@ -1,8 +1,10 @@
 server:
   port: 9196
 spring:
+  application:
+    name: vehicle
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/lptask
+    url: jdbc:mysql://127.0.0.1:3306/htavehicle
     username: root
     password: rootdts123
     driver-class-name: com.mysql.jdbc.Driver
@@ -11,3 +13,5 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: update
+  profiles:
+    active: dev

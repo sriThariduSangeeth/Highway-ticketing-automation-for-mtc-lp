@@ -7,11 +7,11 @@ eureka:
   instance:
     hostname: localhost
     
-project:
+vehicle:
   service :
     base :
-      uri : http://projectservice/project
-task:
+      uri : http://vehicleservice/vehicle
+trip:
   service :
     base :
-      uri : http://taskservice/task
+      uri : http://tripservice/trip
