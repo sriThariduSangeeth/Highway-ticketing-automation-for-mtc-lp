@@ -2,7 +2,7 @@ server:
   port: 9096
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/lpproject
+    url: jdbc:mysql://127.0.0.1:3306/htacounter
     username: root
     password: rootdts123
     driver-class-name: com.mysql.jdbc.Driver
