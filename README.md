@@ -36,8 +36,8 @@
 
 <h4 align="center">Here is a screenshot of the System architecture design</h4>
 <!-- image -->
-<p> User Login Page. This login page base on JWT Token authentication. </p>
+
 <a align="center">
-<img src="./assest/loginpage.png"
-alt="App Screenshots" height="400" width="680">
+<img src="./assest/systemdesgin.png"
+alt="App Screenshots" height="900" width="880">
   </a>
