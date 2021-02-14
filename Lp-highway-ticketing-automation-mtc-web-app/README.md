@@ -30,9 +30,9 @@ LP Training code base that belongs to my office work.
 <img src="https://jwt.io/img/pic_logo.svg" alt="Angular 10" height="25">
 
 
-<h4 align="center">Here is a screenshot of the System architecture design</h4>
+<h3 align="center">Here is a screenshot of the System architecture design</h3>
 <!-- image -->
-<em> > User Login Page. This login page base on JWT Token authentication.</em>
+> <em> User Login Page. This login page base on <a href="https://jwt.io/"> JWT Token <a> authentication.</em>
 
 <a align="center">
   <img src="../assest/loginpage.png" alt="App Screenshots" height="300" width="580">
