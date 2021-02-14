@@ -33,7 +33,7 @@ LP Training code base that belongs to my office work.
 <h3 align="center">Here is a screenshot of the System architecture design</h3>
 <!-- image -->
 <h4>SignIn & SignUp</h4>
-> User Login Page. This login page base on <a href="https://jwt.io/"> JWT Token <a> authentication.
+`User Login Page. This login page base on` <a href="https://jwt.io/"> JWT Token <a> `authentication.`
 <p></P>
 
 <a align="center">
