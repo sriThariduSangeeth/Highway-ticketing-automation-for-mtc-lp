@@ -32,8 +32,8 @@ LP Training code base that belongs to my office work.
 
 <h4 align="center">Here is a screenshot of the System architecture design</h4>
 <!-- image -->
-- User Login Page. This login page base on JWT Token authentication.
+<em> > User Login Page. This login page base on JWT Token authentication.</em>
 
 <a align="center">
-  <img src="../assest/loginpage.png" alt="App Screenshots" height="900" width="880">
+  <img src="../assest/loginpage.png" alt="App Screenshots" height="300" width="580">
 </a>
