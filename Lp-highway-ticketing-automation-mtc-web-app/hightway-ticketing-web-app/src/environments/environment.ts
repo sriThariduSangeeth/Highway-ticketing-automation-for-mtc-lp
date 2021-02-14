@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  DRIVER_SERVER_URL : "http://localhost:9095/driver/upload",
+  apiUrl: 'http://localhost:4000'
 };
 
 /*

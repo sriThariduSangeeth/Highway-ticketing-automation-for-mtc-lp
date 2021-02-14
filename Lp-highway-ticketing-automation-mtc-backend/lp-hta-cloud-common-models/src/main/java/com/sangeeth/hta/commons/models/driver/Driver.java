@@ -16,32 +16,59 @@ public class Driver {
     private int id;
     private String driverName;
     private String driverNIC;
+    private String driverEmail;
     private String driverAddress;
     private String driverBloodGroup;
     private String driverGender;
     private String driverLicenceId;
+    private String password;
     private String imgName;
     private String imgType;
     @Column(name = "imgByte", length = 1000)
     private byte[] imgByte;
 
+
     public Driver(){
         super();
     }
 
-    public Driver(int id, String driverName, String driverNIC, String driverAddress, String driverBloodGroup, String driverGender, String driverLicenceId, String imgName, String imgType, byte[] imgByte) {
-        this.id = id;
+    public Driver(String driverName, String driverNIC, String driverEmail, String driverAddress, String driverBloodGroup, String driverGender, String driverLicenceId, String password, String imgName, String imgType, byte[] imgByte) {
+
         this.driverName = driverName;
         this.driverNIC = driverNIC;
+        this.driverEmail = driverEmail;
         this.driverAddress = driverAddress;
         this.driverBloodGroup = driverBloodGroup;
         this.driverGender = driverGender;
         this.driverLicenceId = driverLicenceId;
+        this.password = password;
         this.imgName = imgName;
         this.imgType = imgType;
         this.imgByte = imgByte;
     }
 
+    public Driver(int id, String driverName, String driverNIC, String driverEmail, String driverAddress, String driverBloodGroup, String driverGender, String driverLicenceId, String password, String imgName, String imgType, byte[] imgByte) {
+        this.id = id;
+        this.driverName = driverName;
+        this.driverNIC = driverNIC;
+        this.driverEmail = driverEmail;
+        this.driverAddress = driverAddress;
+        this.driverBloodGroup = driverBloodGroup;
+        this.driverGender = driverGender;
+        this.driverLicenceId = driverLicenceId;
+        this.password = password;
+        this.imgName = imgName;
+        this.imgType = imgType;
+        this.imgByte = imgByte;
+    }
+
+    public String getDriverEmail() {
+        return driverEmail;
+    }
+
+    public void setDriverEmail(String driverEmail) {
+        this.driverEmail = driverEmail;
+    }
 
     public int getId() {
         return id;
@@ -121,5 +148,13 @@ public class Driver {
 
     public void setImgByte(byte[] imgByte) {
         this.imgByte = imgByte;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

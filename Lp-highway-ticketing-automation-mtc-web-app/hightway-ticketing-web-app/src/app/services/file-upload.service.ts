@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class FileUploadService {
   public upload(formData: FormData) {
     console.log("upload service function is called")
     console.log(formData)
-    return this.httpClient.post<FormData>(this.SERVER_URL, formData, {  
+    return this.httpClient.post<FormData>(environment.DRIVER_SERVER_URL, formData, {  
         reportProgress: true,  
         observe: 'events'  
       });  

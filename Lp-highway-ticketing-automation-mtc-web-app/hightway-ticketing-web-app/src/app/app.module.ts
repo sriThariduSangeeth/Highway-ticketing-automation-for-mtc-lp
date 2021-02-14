@@ -19,8 +19,18 @@ import { LoginComponent } from './login/login.component';
 import { CounterComponent } from './counter/counter.component';
 import { StaticsComponent } from './statics/statics.component';
 import { RegisterComponent } from './register/register.component';
-import { HttpClientModule } from '@angular/common/http';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTabsModule} from '@angular/material/tabs';
+import { AuthGuard } from './guards/auth.guard';
+import { AuthService } from './services/auth.service';
+import { TokenInterceptor } from './interceptor/token.interceptor';
+import { MainComponent } from './main/main.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +40,8 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     CounterComponent,
     StaticsComponent,
-    RegisterComponent
+    RegisterComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -44,11 +55,24 @@ import { FormsModule } from '@angular/forms';
     MatListModule,
     MatGridListModule,
     MatCardModule,
+    MatSlideToggleModule,
     MatMenuModule,
     HttpClientModule,
-    FormsModule
+    MatCheckboxModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatTabsModule,
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

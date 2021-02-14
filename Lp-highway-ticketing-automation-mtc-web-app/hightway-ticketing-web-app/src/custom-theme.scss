@@ -14,8 +14,6 @@
 // hue. Available color palettes: https://material.io/design/color/
 $hightway-ticketing-web-app-primary: mat-palette($mat-indigo);
 $hightway-ticketing-web-app-accent: mat-palette($mat-pink, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
 $hightway-ticketing-web-app-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
@@ -28,8 +26,23 @@ $hightway-ticketing-web-app-theme: mat-light-theme((
   )
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
+
 @include angular-material-theme($hightway-ticketing-web-app-theme);
 
+//dark them for project
+$hightway-ticketing-web-app-primary-dark: mat-palette($mat-orange);
+$hightway-ticketing-web-app-primary-dep-dark: mat-palette($mat-deep-orange);
+$hightway-ticketing-web-app-accent-dark: mat-palette($mat-deep-orange);
+$hightway-ticketing-web-app-warn-dark: mat-palette($mat-red);
+
+$hightway-ticketing-web-app-theme-dark: mat-dark-theme((
+  color: (
+    primary: $hightway-ticketing-web-app-primary-dark,
+    config: $hightway-ticketing-web-app-primary-dep-dark,
+    accent: $hightway-ticketing-web-app-accent-dark,
+    warn: $hightway-ticketing-web-app-warn-dark,
+  )
+));
+.dark-theme-mode{
+  @include angular-material-theme($hightway-ticketing-web-app-theme-dark);
+}
