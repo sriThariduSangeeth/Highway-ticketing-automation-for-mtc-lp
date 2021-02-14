@@ -27,3 +27,14 @@ LP Training code base that belongs to my office work.
  <a>
     <img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif" alt="Build: Passed" height="18">
   </a>
+<img src="https://jwt.io/img/pic_logo.svg" alt="Angular 10" height="25">
+
+
+<h4 align="center">Here is a screenshot of the System architecture design</h4>
+<!-- image -->
+- User Login Page. This login page base on JWT Token authentication.
+
+<a align="center">
+<img src="./assest/systemdesgin.png"
+alt="App Screenshots" height="900" width="880">
+  </a>
