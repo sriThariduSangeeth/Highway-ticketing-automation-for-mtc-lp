@@ -1,6 +1,6 @@
 <h3 align="center">:rotating_light: :construction:&ensp;&ensp;Work In Progress&ensp;&ensp;:construction: :rotating_light:</h3>
 <h1 align="center"> Highway Ticketing System -(HTA) </h1>
-<h3 align="center"> Backend Services </h3>
+<h3 align="center"><strong>  Web Application </strong> (for Counter operators) </h3>
 LP Training code base that belongs to my office work.
 
 <h2>License</h2>
