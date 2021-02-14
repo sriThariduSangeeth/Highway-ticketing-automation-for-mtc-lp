@@ -35,5 +35,5 @@ LP Training code base that belongs to my office work.
 - User Login Page. This login page base on JWT Token authentication.
 
 <a align="center">
-  <img src="./assest/loginpage.png" alt="App Screenshots" height="900" width="880">
+  <img src="../assest/loginpage.png" alt="App Screenshots" height="900" width="880">
 </a>
