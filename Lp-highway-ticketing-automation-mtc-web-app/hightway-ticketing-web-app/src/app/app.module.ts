@@ -30,6 +30,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
 import { TokenInterceptor } from './interceptor/token.interceptor';
 import { MainComponent } from './main/main.component';
+import{FlexLayoutModule} from '@angular/flex-layout'
 
 
 @NgModule({
@@ -63,6 +64,7 @@ import { MainComponent } from './main/main.component';
     MatInputModule,
     MatFormFieldModule,
     MatTabsModule,
+    FlexLayoutModule
   ],
   providers: [
     AuthGuard,

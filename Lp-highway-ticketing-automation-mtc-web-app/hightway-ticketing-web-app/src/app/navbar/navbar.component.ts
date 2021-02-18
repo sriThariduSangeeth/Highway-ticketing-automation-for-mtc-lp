@@ -2,6 +2,7 @@ import { Component ,ViewChild , ElementRef } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { ActivatedRoute, Route } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -16,12 +17,14 @@ export class NavbarComponent{
 
   @ViewChild("drawer",{ static: false }) drawer: any;
 
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
   
+
 
   public clickLogin():void{
     this.drawer.close();
