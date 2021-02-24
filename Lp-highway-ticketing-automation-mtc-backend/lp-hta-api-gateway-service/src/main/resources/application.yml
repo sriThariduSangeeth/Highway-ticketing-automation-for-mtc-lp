@@ -13,19 +13,24 @@ spring:
           uri : lb://vehicleservice
           predicates :
             - Path=/vehicle/**
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: vehicleservice
-                fallbackuri: forward:/vehicleserviceFallBack
+        - id : authservice
+          uri : lb://authservice
+          predicates:
+            - Path=/user/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http//localhost:9191/user/outh/checkToken
 
-hystrix:
-  command:
-    fallbackcmd:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 4000
+
+#hystrix:
+#  command:
+#    fallbackcmd:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 4000
 
 eureka:
   client:

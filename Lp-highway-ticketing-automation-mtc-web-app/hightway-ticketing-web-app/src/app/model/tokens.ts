@@ -1,17 +1,31 @@
 export class Tokens {
-  jwt: string;
+  jwtToken: string;
   refreshToken: string;
+  userName: string;
+  userNIC: string;
 
-  constructor(jwt: string , refreshToken: string){
-      this.jwt = jwt;
+  constructor(jwtToken: string , refreshToken: string , userName: string , userNIC: string){
+      this.jwtToken = jwtToken;
       this.refreshToken = refreshToken;
+      this.userName = userName;
+      this.userNIC = userNIC;
   }
 
-  getJwt():string{
-    return this.jwt;
+  getJwtToken():string{
+    return this.jwtToken;
   }
 
-  getRefreshToken(): string{
+  getRefreshToke():string{
     return this.refreshToken;
   }
+
+  getUserName():string{
+    return this.userName;
+  }
+  
+  getUserNIC():string{
+    return this.userNIC;
+  }
+  
+  
 }

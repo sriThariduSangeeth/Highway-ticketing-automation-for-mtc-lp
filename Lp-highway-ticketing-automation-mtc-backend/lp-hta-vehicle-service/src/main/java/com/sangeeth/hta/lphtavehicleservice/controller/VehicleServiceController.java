@@ -26,6 +26,11 @@ public class VehicleServiceController {
     @Autowired
     private VehicleService vehicleService;
 
+    @GetMapping("/")
+    public String testService(){
+        return "tested";
+    }
+
     @PostMapping("/{type}")
     public ResponseEntity<String> saveVehicle(@PathVariable("type") String type ,@RequestBody String vehicle){
 

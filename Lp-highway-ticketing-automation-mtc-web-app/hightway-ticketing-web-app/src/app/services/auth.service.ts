@@ -14,15 +14,18 @@ export class AuthService {
 
   private readonly JWT_TOKEN = 'JWT_TOKEN';
   private readonly REFRESH_TOKEN = 'REFRESH_TOKEN';
+  private readonly USER_NAME = 'USER_NAME';
+  private readonly USER_NIC = 'USER_NIC';
+
   private loggedUser!: string;
 
   constructor(private http: HttpClient) {}
   
 
-  login(user: { username: string, password: string }): Observable<boolean> {
-    return this.http.post<any>(`${environment.apiUrl}/users/authenticate`, user)
+  login(user: { userName: string, userPassword: string }): Observable<boolean> {
+    return this.http.post<any>(`${environment.apiUrl}/user/authenticate`, user)
       .pipe(
-        tap(tokens => this.doLoginUser(user.username, tokens)),
+        tap(tokens => this.doLoginUser(user.userName, tokens)),
         mapTo(true),
         catchError(error => {
           alert(error.error);
@@ -31,7 +34,7 @@ export class AuthService {
   }
 
   logout() {
-    return this.http.post<any>(`${environment.apiUrl}/users/authenticate`, {
+    return this.http.post<any>(`${environment.apiUrl}/user/authenticate`, {
       'refreshToken': this.getRefreshToken()
     }).pipe(
       tap(() => this.doLogoutUser()),
@@ -49,11 +52,18 @@ export class AuthService {
     return false;
   }
 
+  testToken(){
+    return this.http.get<any>(`${environment.apiUrl}/user/`, {
+      reportProgress: true,  
+      observe: 'events' 
+    });
+  }
+
   refreshToken() {
     return this.http.post<any>(`${environment.apiUrl}/refresh`, {
       'refreshToken': this.getRefreshToken()
     }).pipe(tap((tokens: Tokens) => {
-      this.storeJwtToken(tokens.jwt);
+      this.storeJwtToken(tokens.refreshToken);
     }));
   }
 
@@ -81,12 +91,14 @@ export class AuthService {
   }
 
   private storeTokens(tokens: Tokens) {
-    localStorage.setItem(this.JWT_TOKEN, tokens.jwt);
-    localStorage.setItem(this.REFRESH_TOKEN, tokens.refreshToken);
+    localStorage.setItem(this.JWT_TOKEN, tokens.jwtToken);
+    localStorage.setItem(this.USER_NAME, tokens.userName);
+    localStorage.setItem(this.USER_NIC, tokens.userNIC);
   }
 
   private removeTokens() {
     localStorage.removeItem(this.JWT_TOKEN);
-    localStorage.removeItem(this.REFRESH_TOKEN);
+    localStorage.removeItem(this.USER_NAME);
+    localStorage.removeItem(this.USER_NIC);
   }
 }

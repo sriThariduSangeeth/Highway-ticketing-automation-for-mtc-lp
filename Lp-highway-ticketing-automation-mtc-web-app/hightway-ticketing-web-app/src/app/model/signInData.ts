@@ -1,17 +1,17 @@
 export class SignInData {
-    username: string;
-    password: string;
+    userName: string;
+    userPassword: string;
 
     constructor(username: string, password: string) {
-        this.username = username;
-        this.password = password;
+        this.userName = username;
+        this.userPassword = password;
     }
 
     get Login(): string {
-        return this.username;
+        return this.userName;
     }
 
     get Password(): string {
-        return this.password;
+        return this.userPassword;
     }
 }
