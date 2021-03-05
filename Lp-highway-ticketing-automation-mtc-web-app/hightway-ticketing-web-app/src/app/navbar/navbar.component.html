@@ -22,17 +22,18 @@
 
       <mat-divider></mat-divider>
 
-      <a mat-list-item routerLink="home" class="nav-item" (click)="hidden = true; drawer.close()">
+      <a mat-list-item routerLink="home" class="nav-item" (click)="hidden = true">
         <mat-icon aria-hidden="false">dashboard</mat-icon>
         <span style="padding: 10%;"></span>
         Dashboard
       </a>
-      <a mat-list-item routerLink="counter" class="nav-item" (click)="hidden = true; drawer.close()">
+      <!-- (click)="hidden = true; drawer.close()" -->
+      <a mat-list-item routerLink="counter" class="nav-item"(click)="hidden = true" >
         <mat-icon aria-hidden="false">record_voice_over</mat-icon>
         <span style="padding: 10%;"></span>
         Highway Counter
       </a>
-      <a mat-list-item routerLink="statics" class="nav-item" (click)="hidden = true; drawer.close()">
+      <a mat-list-item routerLink="statics" class="nav-item" (click)="hidden = true">
         <mat-icon aria-hidden="false">equalizer</mat-icon>
         <span style="padding: 10%;"></span>
         Highway Statics
@@ -46,13 +47,13 @@
         <mat-icon *ngIf="!hidden">expand_more</mat-icon>
       </a>
       <mat-divider></mat-divider>
-      <a mat-list-item [hidden]="hidden" routerLink="register" (click)="drawer.close()">
+      <a mat-list-item [hidden]="hidden" routerLink="register/driver" [state]="{ id:1 , name:'Angular'}">
         <span style="padding: 5%;"></span>
-        <mat-icon aria-hidden="false">directions_bike</mat-icon>
+        <mat-icon aria-hidden="false">supervisor_account</mat-icon>
         <span style="padding: 10%;"></span>
         Driver Register
       </a>
-      <a mat-list-item [hidden]="hidden" (click)="drawer.close()">
+      <a mat-list-item [hidden]="hidden"  routerLink="register/vehicle" [state]="{ id:2 , name:'Angular'}">
         <span style="padding: 5%;"></span>
         <mat-icon aria-hidden="false">airport_shuttle</mat-icon>
         <span style="padding: 10%;"></span>

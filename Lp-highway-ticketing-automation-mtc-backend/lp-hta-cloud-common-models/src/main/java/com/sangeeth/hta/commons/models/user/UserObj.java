@@ -25,4 +25,10 @@ public class UserObj {
     private String userPassword;
 
 
+    public UserObj(String userName, String userEmail, String userNIC, String userPassword) {
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.userNIC = userNIC;
+        this.userPassword = userPassword;
+    }
 }

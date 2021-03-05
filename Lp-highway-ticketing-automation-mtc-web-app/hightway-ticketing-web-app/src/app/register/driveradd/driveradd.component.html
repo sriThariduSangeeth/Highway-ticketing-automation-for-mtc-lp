@@ -1,0 +1,183 @@
+<div class="grid-container">
+    <div fxLayout="row" fxLayoutAlign="center">
+        <mat-card class="dashboard-card">
+
+            <mat-card-header>
+                <mat-icon>face</mat-icon>
+                <mat-card-title>{{registermode}}</mat-card-title>
+
+                <mat-card-subtitle>Registration</mat-card-subtitle>
+                <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+                    <div fxLayoutGap="20px">
+                        <button mat-raised-button (click)="submit()" color="primary" type="submit">Submit</button>
+                    </div>
+
+                </div>
+            </mat-card-header>
+
+            <mat-card-content class="dashboard-card-content">
+                <!-- <cdk-virtual-scroll-viewport > -->
+                <div fxLayout="row" fxLayoutAlign="space-around start" fxLayoutGap="20px" class="stats-cards">
+                    <div class="" fxFlex="1 1 auto">
+                        <p>
+                            <mat-form-field class="form-field" appearance="standard">
+                                <mat-label>Driver Full Name</mat-label>
+                                <input matInput placeholder="Full Name" [(ngModel)]="dname">
+                                <button mat-button *ngIf="dname" matSuffix mat-icon-button aria-label="Clear" (click)="dname=''">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                                <mat-icon matSuffix *ngIf="!dname">portrait</mat-icon>
+                                <mat-hint>Devide Gutter</mat-hint>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field class="form-field" appearance="standard">
+                                <mat-label>Home Address</mat-label>
+                                <input matInput placeholder="Home Address" [(ngModel)]="daddress">
+                                <button mat-button *ngIf="daddress" matSuffix mat-icon-button aria-label="Clear" (click)="daddress=''">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                                <mat-icon matSuffix *ngIf="!daddress">house</mat-icon>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field class="form-field" appearance="standard">
+                                <mat-label>Gender</mat-label>
+                                <input matInput placeholder="Gender" [(ngModel)]="dgender">
+                                <button mat-button *ngIf="dgender" matSuffix mat-icon-button aria-label="Clear" (click)="dgender=''">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                                <mat-icon matSuffix *ngIf="!dgender">transgender</mat-icon>
+                                <mat-hint>(Male / Female / other)</mat-hint>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field class="form-field" appearance="standard">
+                                <mat-label>Diver License Number</mat-label>
+                                <input matInput placeholder="License Number" [(ngModel)]="dlicense">
+                                <button mat-button *ngIf="dlicense" matSuffix mat-icon-button aria-label="Clear" (click)="dlicense=''">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                                <mat-icon matSuffix *ngIf="!dlicense">credit_score</mat-icon>
+                                <mat-hint>B123456</mat-hint>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field class="form-field" appearance="standard">
+                                <mat-label>NIC Number</mat-label>
+                                <input matInput placeholder="NIC Number" [(ngModel)]="dnic">
+                                <button mat-button *ngIf="dnic" matSuffix mat-icon-button aria-label="Clear" (click)="dnic=''">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                                <mat-icon matSuffix *ngIf="!dnic">credit_card</mat-icon>
+                                <mat-hint>123456789 V</mat-hint>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field class="form-field" appearance="outline">
+                                <mat-label>Mobile Number</mat-label>
+                                <span matPrefix>+(94) &nbsp;</span>
+                                <input matInput placeholder="555-555-1234" [(ngModel)]="dtelnumber">
+                                <button mat-button *ngIf="dtelnumber" matSuffix mat-icon-button aria-label="Clear" (click)="dtelnumber=''">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                                <mat-icon matSuffix *ngIf="!dtelnumber">phone</mat-icon>
+                                <mat-hint>+(94)11 123 4567</mat-hint>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field class="form-field" appearance="outline">
+                                <mat-label>Email Address</mat-label>
+                                <input matInput placeholder="Email" [(ngModel)]="demail">
+                                <button mat-button *ngIf="demail" matSuffix mat-icon-button aria-label="Clear" (click)="demail=''">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                                <mat-icon matSuffix *ngIf="!demail">mail</mat-icon>
+                                <mat-hint>example@email.com</mat-hint>
+                            </mat-form-field>
+                        </p>
+
+                        <p>
+                            <mat-form-field class="form-field" appearance="outline">
+                                <mat-label>Blood Group</mat-label>
+                                <input matInput placeholder="Blood Group" [(ngModel)]="dblood">
+                                <button mat-button *ngIf="dblood" matSuffix mat-icon-button aria-label="Clear" (click)="dblood=''">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                                <mat-icon matSuffix *ngIf="!dblood">bloodtype</mat-icon>
+                                <mat-hint>B+</mat-hint>
+                            </mat-form-field>
+                        </p>
+
+                        <p>
+                            <mat-form-field class="form-field" appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input matInput placeholder="Password" type="password" [(ngModel)]="dpassword">
+                                <button mat-button *ngIf="dpassword" matSuffix mat-icon-button aria-label="Clear" (click)="dpassword=''">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                                <mat-icon matSuffix *ngIf="!dpassword">password</mat-icon>
+                                <mat-hint>Min-(7 digit)</mat-hint>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field class="form-field" appearance="outline">
+                                <mat-label>Re-Password</mat-label>
+                                <input matInput placeholder="Password" type="password" [(ngModel)]="drepassword">
+                                <button mat-button *ngIf="drepassword" matSuffix mat-icon-button aria-label="Clear" (click)="drepassword=''">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                                <mat-icon matSuffix *ngIf="!drepassword">password</mat-icon>
+                                <mat-hint>Min-(7 digit)</mat-hint>
+                            </mat-form-field>
+                        </p>
+                    </div>
+                    <div fxFlex="1 1 auto">
+
+                        <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="20px">
+                            <div class="container row">
+                                <div class="col-md-12">
+                                    <h1>Upload Profile Image</h1>
+                                </div>
+                            </div>
+                            <div class="profile-picture">
+                                <img *ngIf="url" width=300 height=300 src="{{url}}" />
+                            </div>
+                            <div class="container row">
+                                <div class="col-md-6">
+                                    <input type="file" #fileUpload (change)="onFileChanged($event)" accept="image/*" id="fileUpload" name="fileUpload" multiple="multiple">
+
+                                </div>
+                            </div>
+
+
+                            <div class="container row">
+                                <div class="col-md-12">
+                                    <div *ngIf=message>{{message}}</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+                <!-- <p>
+              <mat-form-field appearance="outline">
+                <mat-label>Outline form field</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+              </mat-form-field>
+            </p> -->
+
+                <!-- </cdk-virtual-scroll-viewport> -->
+
+            </mat-card-content>
+
+        </mat-card>
+    </div>
+</div>

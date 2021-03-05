@@ -17,3 +17,8 @@ spring:
 
 jwt:
   secret: dtsangeeth
+
+driver:
+  service:
+    base:
+      uri:  http://localhost:9091

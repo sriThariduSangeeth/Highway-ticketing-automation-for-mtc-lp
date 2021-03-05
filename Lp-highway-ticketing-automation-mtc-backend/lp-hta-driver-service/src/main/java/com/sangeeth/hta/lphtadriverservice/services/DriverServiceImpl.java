@@ -8,5 +8,5 @@ import org.springframework.stereotype.Service;
  * @project lp-hta-driver-service
  */
 @Service
-public interface DriverServiceImpl {
+public class DriverServiceImpl implements DriverServices{
 }

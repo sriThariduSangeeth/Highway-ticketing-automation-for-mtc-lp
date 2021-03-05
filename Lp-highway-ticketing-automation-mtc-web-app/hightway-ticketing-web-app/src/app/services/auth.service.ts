@@ -68,7 +68,6 @@ export class AuthService {
   }
 
   getJwtToken() :any{
-    console.log(localStorage.getItem(this.JWT_TOKEN));
     return localStorage.getItem(this.JWT_TOKEN);
   }
 
@@ -77,7 +76,7 @@ export class AuthService {
     this.storeTokens(tokens);
   }
 
-  private doLogoutUser() {
+  public doLogoutUser() {
     // this.loggedUser = null;
     this.removeTokens();
   }

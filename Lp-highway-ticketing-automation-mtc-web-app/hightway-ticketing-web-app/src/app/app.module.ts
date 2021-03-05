@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import {CdkStepperModule} from '@angular/cdk/stepper';
+import {CdkTableModule} from '@angular/cdk/table';
+import {CdkTreeModule} from '@angular/cdk/tree';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,13 +20,13 @@ import { HomeComponent } from './home/home.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 import { LoginComponent } from './login/login.component';
 import { CounterComponent } from './counter/counter.component';
 import { StaticsComponent } from './statics/statics.component';
-import { RegisterComponent } from './register/register.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -31,6 +36,12 @@ import { AuthService } from './services/auth.service';
 import { TokenInterceptor } from './interceptor/token.interceptor';
 import { MainComponent } from './main/main.component';
 import{FlexLayoutModule} from '@angular/flex-layout'
+import { AreachartComponent } from './shared/widget/areachart/areachart.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { WidgetCardchartComponent } from './shared/widget/widget-cardchart/widget-cardchart.component';
+import { WidgetPiechartComponent } from './shared/widget/widget-piechart/widget-piechart.component';
+import { DriveraddComponent } from './register/driveradd/driveradd.component';
+import { VehicleaddComponent } from './register/vehicleadd/vehicleadd.component';
 
 
 @NgModule({
@@ -41,16 +52,25 @@ import{FlexLayoutModule} from '@angular/flex-layout'
     LoginComponent,
     CounterComponent,
     StaticsComponent,
-    RegisterComponent,
-    MainComponent
+    MainComponent,
+    AreachartComponent,
+    WidgetCardchartComponent,
+    WidgetPiechartComponent,
+    DriveraddComponent,
+    VehicleaddComponent
   ],
   imports: [
     BrowserModule,
+    ScrollingModule,
+    CdkStepperModule,
+    CdkTableModule,
+    CdkTreeModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
+    NgxMatFileInputModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
@@ -60,11 +80,13 @@ import{FlexLayoutModule} from '@angular/flex-layout'
     MatMenuModule,
     HttpClientModule,
     MatCheckboxModule,
+    ReactiveFormsModule,
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
     MatTabsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HighchartsChartModule,
   ],
   providers: [
     AuthGuard,
