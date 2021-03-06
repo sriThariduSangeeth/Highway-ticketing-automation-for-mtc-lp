@@ -1,5 +1,6 @@
 package com.sangeeth.hta.lphtadriverservice.services;
 
+import com.sangeeth.hta.commons.models.driver.Driver;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,4 +10,6 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface DriverServices {
+
+    Driver addNewDriver(Driver driver);
 }

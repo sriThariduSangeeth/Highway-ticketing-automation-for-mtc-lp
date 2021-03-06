@@ -1,5 +1,7 @@
 package com.sangeeth.hta.commons.models.driver;
 
+import lombok.AllArgsConstructor;
+
 import javax.persistence.*;
 
 /**

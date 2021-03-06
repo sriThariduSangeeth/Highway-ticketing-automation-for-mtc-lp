@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: authservice
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 15MB
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/htaauth
     username: root
@@ -21,4 +25,4 @@ jwt:
 driver:
   service:
     base:
-      uri:  http://localhost:9091
+      uri:  http://localhost:9095
