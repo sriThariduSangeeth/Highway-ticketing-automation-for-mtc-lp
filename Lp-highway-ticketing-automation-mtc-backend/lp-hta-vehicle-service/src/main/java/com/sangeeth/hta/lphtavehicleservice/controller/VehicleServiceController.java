@@ -50,7 +50,7 @@ public class VehicleServiceController {
                         .status(HttpStatus.UNAUTHORIZED)
                         .body("Invalid Vehicle id : "+req.getVehicleId()+". JPA db error " );
             }
-        }else {
+        }else{
             return ResponseEntity
                     .status(HttpStatus.UNAUTHORIZED)
                     .body("Invalid Vehicle Object or Vehicle Type !" );

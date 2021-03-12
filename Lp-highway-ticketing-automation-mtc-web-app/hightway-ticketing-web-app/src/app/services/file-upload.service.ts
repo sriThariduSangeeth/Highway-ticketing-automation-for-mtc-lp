@@ -8,12 +8,12 @@ import { environment } from 'src/environments/environment';
 export class FileUploadService {
 
   constructor(private httpClient:HttpClient) { }
-  SERVER_URL: string = "http://localhost:9095/driver/upload";  
+  SERVER_URL: string = "http://localhost:9098/user/driver";  
 
   public upload(formData: FormData) {
     console.log("upload service function is called")
     console.log(formData)
-    return this.httpClient.post<FormData>(environment.DRIVER_SERVER_URL, formData, {  
+    return this.httpClient.post<FormData>(`${environment.apiUrl}/user/driver`, formData, {  
         reportProgress: true,  
         observe: 'events'  
       });  

@@ -35,7 +35,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
 import { TokenInterceptor } from './interceptor/token.interceptor';
 import { MainComponent } from './main/main.component';
-import{FlexLayoutModule} from '@angular/flex-layout'
+import{FlexLayoutModule} from '@angular/flex-layout';
 import { AreachartComponent } from './shared/widget/areachart/areachart.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { WidgetCardchartComponent } from './shared/widget/widget-cardchart/widget-cardchart.component';

@@ -1,7 +1,6 @@
 package com.sangeeth.hta.lphtadriverservice.services;
 
 
-import com.google.api.services.drive.model.File;
 
 /**
  * @author dtsangeeth
@@ -9,6 +8,6 @@ import com.google.api.services.drive.model.File;
  * @project lp-hta-vehicle-service
  */
 public interface GoogleDriveService {
-
-    File upLoadFile(String fileName, String filePath, String mimeType);
+//
+//    File upLoadFile(String fileName, String filePath, String mimeType);
 }

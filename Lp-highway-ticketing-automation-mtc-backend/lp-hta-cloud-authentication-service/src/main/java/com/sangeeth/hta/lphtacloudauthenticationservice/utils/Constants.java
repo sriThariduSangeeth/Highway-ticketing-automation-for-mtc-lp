@@ -9,5 +9,7 @@ public class Constants {
 
     public static final String DRIVER_SERVICE_BASE_URL = "driver.service.base.uri";
 
+    public static final String JWT_SECRET = "jwt.secret";
+
     public static final String COUNTER_SERVICE_BASE_URL = "counter.service.base.uri";
 }

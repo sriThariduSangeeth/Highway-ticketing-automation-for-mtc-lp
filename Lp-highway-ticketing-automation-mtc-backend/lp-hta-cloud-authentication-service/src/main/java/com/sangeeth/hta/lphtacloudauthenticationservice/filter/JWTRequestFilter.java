@@ -2,8 +2,9 @@ package com.sangeeth.hta.lphtacloudauthenticationservice.filter;
 
 import com.sangeeth.hta.lphtacloudauthenticationservice.services.UserService;
 import com.sangeeth.hta.lphtacloudauthenticationservice.utils.JWTTokenUtility;
-import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -31,21 +32,31 @@ public class JWTRequestFilter extends OncePerRequestFilter {
     @Autowired
     private UserService userService;
 
+    @Value("${jwt.secret}")
+    private String secret;
+
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
 
         String authorization = httpServletRequest.getHeader("Authorization");
         String token = null;
         String userName = null;
+        Claims claims;
 
         if(null != authorization && authorization.startsWith("Bearer ")){
             token = authorization.substring(7);
             try{
+                claims = Jwts.parser()
+                        .setSigningKey(secret)
+                        .parseClaimsJws(token).getBody();
+
                 userName = jwtTokenUtility.getUsernameFromToken(token);
             }catch (IllegalArgumentException ieg){
                 logger.error("Unable to get JWT Token");
             }catch (ExpiredJwtException e){
                 logger.error("Token has invalid"+ e.getMessage());
+            }catch (JwtException ex) {
+                logger.error("Wrong Token"+ ex.getMessage());
             }
 
         }else if (authorization == null){

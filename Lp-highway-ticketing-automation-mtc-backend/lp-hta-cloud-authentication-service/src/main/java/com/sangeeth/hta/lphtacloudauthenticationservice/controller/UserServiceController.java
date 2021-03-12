@@ -95,25 +95,29 @@ public class UserServiceController {
     public ResponseEntity<?> addDriver(@RequestParam ("profileImg") MultipartFile driverpro , @RequestParam ("driver") String driverfiles){
         try {
             DriverReqest driverReqest = new Gson().fromJson(driverfiles, DriverReqest.class);
-            userService.addUser(new UserObj(driverReqest.getDriverName(),driverReqest.getDriverEmail(),driverReqest.getDriverNIC(),driverReqest.getPassword()));
-            ResponseEntity<?> resa = restTemplate.postForEntity(new URI(driverBaseurl+"/driver"),new Driver(driverReqest.getDriverName(),
-                    driverReqest.getDriverNIC(),driverReqest.getDriverEmail(),driverReqest.getDriverAddress(),driverReqest.getDriverBloodGroup(),
-                    driverReqest.getDriverGender(),driverReqest.getDriverLicenceId(),driverReqest.getPassword(),
-                    driverpro.getOriginalFilename(),driverpro.getContentType(), ByteConverter.compressBytes(driverpro.getBytes())),String.class);
+//            userService.addUser(new UserObj(driverReqest.getDriverName(),driverReqest.getDriverEmail(),driverReqest.getDriverNIC(),driverReqest.getPassword()));
+//            ResponseEntity<?> resa = restTemplate.postForEntity(new URI(driverBaseurl+"/driver"),new Driver(driverReqest.getDriverName(),
+//                    driverReqest.getDriverNIC(),driverReqest.getDriverEmail(),driverReqest.getDriverAddress(),driverReqest.getDriverBloodGroup(),
+//                    driverReqest.getDriverGender(),driverReqest.getDriverLicenceId(),driverReqest.getPassword(),
+//                    driverpro.getOriginalFilename(),driverpro.getContentType(), ByteConverter.compressBytes(driverpro.getBytes())),String.class);
+            String resa = restTemplate.postForObject("http://localhost:9095/driver/","hgvgvgcg",String.class);
 
-            return resa;
+            return ResponseEntity.status(HttpStatus.OK).body(resa);
         }catch (JpaSystemException jpe){
             log.error("DB insert error" +jpe);
             return ResponseEntity.
                     status(HttpStatus.UNAUTHORIZED).body("Invalid User Object or can not insert new user." );
-        }catch (URISyntaxException e) {
-            log.error("URL Convert error" +e);
-            return ResponseEntity.
-                    status(HttpStatus.UNAUTHORIZED).body("Invalid User Object or can not insert new user." );
-        } catch (IOException e) {
-            log.error("URL Convert error" +e);
-            return ResponseEntity.
-                    status(HttpStatus.UNAUTHORIZED).body("Invalid User Object or can not insert new user." );
         }
+//        catch (URISyntaxException e) {
+//            log.error("URL Convert error" +e);
+//            return ResponseEntity.
+//                    status(HttpStatus.UNAUTHORIZED).body("Invalid User Object or can not insert new user." );
+//        }
+//        catch (IOException e) {
+//            log.error("URL Convert error" +e);
+//            return ResponseEntity.
+//                    status(HttpStatus.UNAUTHORIZED).body("Invalid User Object or can not insert new user." );
+//        }
     }
+
 }
