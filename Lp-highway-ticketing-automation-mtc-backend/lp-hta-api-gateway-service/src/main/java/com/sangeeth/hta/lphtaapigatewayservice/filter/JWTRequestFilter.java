@@ -12,6 +12,8 @@ import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.cloud.gateway.filter.headers.HttpHeadersFilter;
 import org.springframework.core.Ordered;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
@@ -47,7 +49,7 @@ public class JWTRequestFilter implements GlobalFilter, Ordered  {
                 log.error("Token has invalid"+ e.getMessage());
             }catch (JwtException ex) {
                 log.error("Wrong Token"+ ex.getMessage());
-                return null;
+                return this.onError(exchange,"api-key missing",HttpStatus.UNAUTHORIZED);
             }
 
         }else if (authorization == null){
@@ -62,6 +64,12 @@ public class JWTRequestFilter implements GlobalFilter, Ordered  {
     @Override
     public int getOrder() {
         return 20000;
+    }
+
+    private Mono<Void> onError(ServerWebExchange exchange, String err, HttpStatus httpStatus)  {
+        ServerHttpResponse response = exchange.getResponse();
+        response.setStatusCode(httpStatus);
+        return response.setComplete();
     }
 
 }
